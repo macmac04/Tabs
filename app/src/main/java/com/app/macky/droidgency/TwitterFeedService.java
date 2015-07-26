@@ -2,8 +2,7 @@ package com.app.macky.droidgency;
 
 import android.util.Base64;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+
 
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -69,8 +68,8 @@ public class TwitterFeedService {
         TwitterAuthToken twitterAuthToken = null;
         if (jsonAuth != null && jsonAuth.length() > 0) {
             try {
-                Gson gson = new Gson();
-                twitterAuthToken = gson.fromJson(jsonAuth, TwitterAuthToken.class);
+        //        Gson gson = new Gson();
+              //  twitterAuthToken = gson.fromJson(jsonAuth, TwitterAuthToken.class);
             } catch (IllegalStateException ex) { }
         }
         return twitterAuthToken;
@@ -80,9 +79,9 @@ public class TwitterFeedService {
         ArrayList<TwitterTweet> twitterTweetArrayList = null;
         if (twitterTweets != null && twitterTweets.length() > 0) {
             try {
-                Gson gson = new Gson();
-                twitterTweetArrayList =
-                        gson.fromJson(twitterTweets, new TypeToken<ArrayList<TwitterTweet>>(){}.getType());
+            //    Gson gson = new Gson();
+            //    twitterTweetArrayList =
+                   //     gson.fromJson(twitterTweets, new TypeToken<ArrayList<TwitterTweet>>(){}.getType());
             } catch (IllegalStateException e) {
             }
         }
